@@ -1,0 +1,215 @@
+:root {
+	--muted: #d8bfbf;
+	--shadow: 0 6px 20px rgba(25, 5, 5, 0.6);
+	--maroon-dark: #56050a;
+	--maroon-header: #59090e;
+	--gold: #bc8107;
+	--gold-shadow: #bc8204;
+	--gold-text: #ffdd88;
+	--gradient-light: #fff8f8;
+	--hero-grad: rgba(43, 10, 10, 0);
+	--overlay-light: rgba(43, 10, 10, 0.35);
+	--overlay-ligh2: rgba(75, 16, 16, 0.35);
+	--glow: rgba(255, 190, 90, 0.8);
+	--max-width: 1100px;
+	--header-height: 90px;
+}
+body {
+	margin: 0;
+	color: white;
+	font-family: Roboto;
+	background: url('../images/background.png') center top repeat-y;
+	scroll-behavior: none;
+	overflow-x: hidden;
+}
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: var(--header-height);
+}
+a {
+	text-decoration: none;
+}
+p {
+	font-size: 20px;
+}
+.container {
+	margin: 0 auto;
+	padding: 32px 16px;
+	max-width: var(--max-width);
+}
+.section {
+	padding: 64px 0;
+	opacity: 0;
+	min-height: 500px;
+	position: relative;
+	z-index: 1;
+}
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.site-header {
+	position: relative;
+}
+.header-inner {
+	position: fixed;
+	inset: 0 0 auto;
+	width: 100%;
+	background: var(--maroon-header);
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+	max-width: 100% !important;
+	margin: 0 !important;
+	gap: 16px;
+	padding: 16px 32px;
+	justify-content: space-between;
+	z-index: 1000;
+	box-sizing: border-box;
+	align-items: center;
+	display: flex;
+}
+.brand {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+}
+.logo {
+	width: 100px;
+}
+.itso {
+	width: 200px;
+}
+.itso-hero {
+	width: 500px;
+	filter: drop-shadow(0 0 5px var(--glow));
+	transition: transform 1.2s, filter 1.2s;
+}
+.itso-hero:hover {
+	transform: scale(1.09);
+	filter: drop-shadow(0 0 10px var(--glow));
+}
+.itso-hero-container {
+	text-align: center;
+}
+.primary-nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	gap: 16px;
+	padding: 0;
+	margin: 0;
+}
+.primary-nav a {
+	padding: 12px 22px;
+	border-radius: 4px;
+}
+.primary-nav label {
+	width: 100%;
+	display: block;
+	cursor: pointer;
+}
+.primary-nav a,
+.primary-nav label a {
+	display: block;
+	padding: 16px;
+	color: white;
+	font-weight: 600;
+	transition: 0.3s
+}
+.primary-nav a:hover,
+.primary-nav label a:hover {
+	background: var(--gold); 
+	box-shadow: 0 0 5px var(--glow);
+	transform: translateY(-4px);
+}
+.burger-toggle {
+	display: none;
+}
+.burger-icon {
+	display: none;
+	cursor:pointer;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 30px;
+	height: 25px;
+	padding: 5px;
+	z-index: 25;
+}
+.burger-icon span {
+	width: 100%;
+	height: 3px;
+	background: var(--gold);
+	border-radius: 2px;
+	transition: transform 0.3s, opacity 0.3s;
+}
+.header-circuit {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	right: 0;
+	height: 10px;
+	background: linear-gradient(90deg, var(--gold), var(--gradient-light), var(--gold));
+	animation: slideCircuit 2s linear infinite;
+}
+#top {
+	position: relative;
+	height: 400px;
+	overflow: visible;
+}
+#top .slide {
+	position: absolute;
+	height: 117%;
+	background-size: cover;
+	background-position: center;
+	opacity: 0;
+	inset: 0;
+	z-index: -1;
+	animation: fadeSlides 12s infinite
+}
+#top .slide1 {
+	background: linear-gradient(to bottom, var(--maroon-dark) 0%, var(--hero-grad) 100%), url('../images/home.png') center/cover no-repeat;
+}
+#top .slide1 {
+	background: linear-gradient(to bottom, var(--maroon-dark) 0%, var(--hero-grad) 100%), url('../images/home.png') center/cover no-repeat;
+	animation-delay: 4s;
+}
+#top .slide1 {
+	background: linear-gradient(to bottom, var(--maroon-dark) 0%, var(--hero-grad) 100%), url('../images/home.png') center/cover no-repeat;
+	animation-delay: 8s;
+}
+.hero {
+	margin-top: var(--header-height);
+	padding: 64px 96px;
+	text-align: left;
+}
+.hero-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.hero-grid {
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+.hero-text h3 strong {
+	color: var(--gold-text);
+	text-shadow: 0 0 10px var(--glow);
+	font-size: 25px;
+	display: inline-block;
+}
+.lang-logos {
+	display: flex;
+	gap: 12px;
+	margin-top: 12px;
+	justify-content: center;
+	flex-wrap: wrap;
+	z-index: 10;
+}
+.lang-logo {
+	width: 80px;
+	height: 80px;
+	object-fit: contain;
+	animation: glowCycle 6s infinite;
+}
