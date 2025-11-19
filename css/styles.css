@@ -455,7 +455,7 @@ a {
     scroll-margin-top: 65px;
   }
   .container { padding: 32px 20px; }
-  .burger-icon { display: flex; margin-left: auto; }
+  .burger-icon { display: flex}
   .primary-nav {
     position: fixed;
     inset: 0 0 0 auto;
@@ -539,3 +539,4 @@ a {
   to { opacity: 1; }
 
 }
+
