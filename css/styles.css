@@ -454,6 +454,8 @@ a {
     margin-top: 20px;
     scroll-margin-top: 65px;
   }
+	.section-title::before {
+		width: 100%;
   .container { padding: 32px 20px; }
   .burger-icon { display: flex}
   .primary-nav {
@@ -539,5 +541,6 @@ a {
   to { opacity: 1; }
 
 }
+
 
 
