@@ -22,7 +22,6 @@ body {
   color: white;
   background: url('../images/background.png') center top repeat-y;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 html {
   scroll-padding-top: var(--header-height);
@@ -481,4 +480,5 @@ strong {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
 
