@@ -141,7 +141,6 @@ p { font-size: 20px; }
 #top {
   position: relative;
   height: 400px;
-  overflow: visible;
 }
 #top .slide {
   position: absolute;
@@ -538,4 +537,5 @@ a {
 @keyframes fadeUp {
   from { opacity: 0; }
   to { opacity: 1; }
+
 }
